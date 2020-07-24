@@ -202,8 +202,11 @@ def main():
                 failures.append(url)
             time.sleep(randint(1, 3))
 
-    with open('errori_mostri.txt', 'w', encoding='utf-8') as err:
-        err.writelines(failures)
+    print(f'{len(url_mostri)} URL elaborate ({len(url_mostri) - len(failures)} successi, {len(failures)} fallimenti)')
+
+    if failures:
+        with open('errori_mostri.txt', 'w', encoding='utf-8') as err:
+            err.write('\n'.join(failures))
 
 
 if __name__ == '__main__':
