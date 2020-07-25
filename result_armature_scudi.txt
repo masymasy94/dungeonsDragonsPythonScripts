@@ -1,0 +1,169 @@
+
+result.add(
+        Enchantment(
+            "Armatura Completa a Piastre",
+            "15",
+            "18",
+             32,5 kg,
+            "Si",
+            "1.500 mo",
+            "Quest’armatura consiste di piastre di metallo sagomate a incastro che coprono l’intero corpo. Un’armatura di piastre comprende guanti, stivali di cuoio pesanti, un elmo con visiera, e uno spesso strato di imbottitura sotto l’armatura. Fibbie e lacci distribuiscono il peso dell’armatura su tutto il corpo."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Armatura Imbottita",
+            "Nessuna",
+            "11 + modificatore di Des",
+             4 kg,
+            "Si",
+            "5 mo",
+            "Le armature imbottite consistono di strati di tessuto e imbottitura cuciti insieme."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Mezza a Piastre",
+            "Nessuna",
+            "15 + modificatore Des (massimo 2)",
+             20 kg,
+            "Si",
+            "750 mo",
+            "La mezza armatura di piastre consiste di piastre di metallo sagomate che coprono gran parte del corpo del personaggio. Non comprende protezioni per le gambe oltre a dei semplici schinieri legati con lacci di cuoio."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Armatura di Cuoio Borchiato",
+            "Nessuna",
+            "12 + modificatore di Des",
+             6,5 kg,
+            "No",
+            "45 mo",
+            "Fatta di cuoio duro ma flessibile, l’armatura di cuoio borchiato è rinforzata da rivetti o spuntoni."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Armatura a Scaglie",
+            "Nessuna",
+            "14 + modificatore Des (massimo 2)",
+             22,5 kg,
+            "Si",
+            "50 mo",
+            "Quest’armatura consiste in una cotta e gambali (a volte anche di una gonna separata) di cuoio coperti da pezzi di metallo sovrapposti, in maniera simile alle scaglie di un pesce. L’armatura è completa di guanti."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Armatura ad Anelli",
+            "Nessuna",
+            "14",
+             20 kg,
+            "Si",
+            "30 mo",
+            "Quest’armatura è un’armatura di cuoio con dei pesanti anelli cuciti sopra. Gli anelli servono a rinforzare l’armatura contro i colpi di spada e d’ascia. L’armatura di anelli è inferiore alla cotta di maglia, e viene di solito indossata solo da chi non si può permettere di meglio."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Armatura di Cuoio",
+            "Nessuna",
+            "11 + modificatore di Des",
+             5 kg,
+            "No",
+            "10 mo",
+            "Il corpetto e le protezioni delle spalle di questa armatura sono fatte di cuoio indurito dopo essere stato bollito nell’olio. Il resto dell’armatura è composto di materiali più morbidi e flessibili."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Corazza a Piastre",
+            "Nessuna",
+            "14 + modificatore Des (massimo 2)",
+             10 kg,
+            "No",
+            "400 mo",
+            "Questa armatura consiste di un corpetto di metallo indossato su di uno strato di cuoio. Sebbene lasci braccia e gambe relativamente scoperte, l’armatura fornisce una buona protezione agli organi vitali del personaggio, senza procurargli grande ingombro."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Armatura di Pelle",
+            "Nessuna",
+            "12 + modificatore Des (massimo 2)",
+             6 kg,
+            "No",
+            "10 mo",
+            "Un’armatura rozza composta di pelle e folta pelliccia. È indossata normalmente da tribù barbariche, umanoidi malvagi e altre popolazioni che non hanno accesso agli attrezzi e i materiali per costruire armature migliori."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Cotta di Maglia",
+            "13",
+            "16",
+             27,5 kg,
+            "Si",
+            "75 mo",
+            "Fatta di anelli di metallo intrecciati fra di loro, la cotta di maglia comprende uno strato di tessuto cucito sotto una maglia di metallo per impediregraffi e assorbire l’impatto dei colpi. L’armatura è completa di guanti."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Giaco di Maglia",
+            "Nessuna",
+            "13 + modificatore Des (massimo 2)",
+             10 kg,
+            "No",
+            "50 mo",
+            "Composto di anelli metallici intrecciati tra di loro, un giaco di maglia viene indossato sopra strati di abiti o cuoio. Questo tipo di armatura offre una protezione modesta alla parte superiore del corpo, mentre il rumore degli anelli che strusciano fra di loro viene attutito dagli altri strati."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Scudo",
+            "Nessuna",
+            "+2",
+             3 kg,
+            "No",
+            "10 mo",
+            "Uno scudo è fatto di legno o di metallo e viene retto da una mano sola. Impugnare uno scudo aumenta la tua Classe Armatura di 2. Puoi ottenere i benefici di un solo scudo alla volta."
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Armatura a Strisce",
+            "15",
+            "17",
+             30 kg,
+            "Si",
+            "200 mo",
+            "L’armatura è fatta di strette strisce verticali di metallo rivettate a un sostegno di cuoio indossato sopra un’imbottitura di tessuto. Un’armatura di maglia metallica flessibile protegge le giunture."
+        )
+)
+
