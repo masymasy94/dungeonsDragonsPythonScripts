@@ -1,0 +1,456 @@
+
+result.add(
+        Enchantment(
+            "Spada Lunga",
+            "Versatile (1d10)",
+            "Taglienti",
+             1,5 kg,
+            "1d8",
+            "15 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Rete",
+            "Lancio (gittata 1,5/4,5), Speciale",
+            "Taglienti",
+             1,5 kg,
+            "None",
+            "1 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Martello da Guerra",
+            "Versatile (1d10)",
+            "Contundenti",
+             1 kg,
+            "1d8",
+            "15 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Martello Leggero",
+            "Lancio (gittata 6/18), Leggera",
+            "Contundenti",
+             1 kg,
+            "1d4",
+            "2 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Balestra Pesante",
+            "Due mani, Munizioni (gittata 30/120), Pesante, Ricarica",
+            "Perforanti",
+             9 kg,
+            "1d10",
+            "50 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Arco Corto",
+            "Due Mani, Munizioni (gittata 24/96)",
+            "Perforanti",
+             1 kg,
+            "1d6",
+            "25 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Arco Lungo",
+            "Due mani, Munizioni (gittata 45/180), Pesante",
+            "Perforanti",
+             1 kg,
+            "1d8",
+            "50 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Balestra Leggera",
+            "Due mani, Munizioni (gittata 24/96), Ricarica",
+            "Perforanti",
+             2,5 kg,
+            "1d8",
+            "25 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Balestra a Mano",
+            "Leggera, Munizioni (gittata 9/36), Ricarica",
+            "Perforanti",
+             1,5 kg,
+            "1d6",
+            "75 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Dardo",
+            "Accurata, Lancio (gittata 9/36)",
+            "Perforanti",
+             0,125 kg,
+            "1d4",
+            "5 mr"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Cerbottata",
+            "Munizioni (gittata 7,5/30), Ricarica",
+            "Perforanti",
+             0,5 kg,
+            "1",
+            "10 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Fionda",
+            "Munizioni (gittata 9/36)",
+            "Contundenti",
+             None,
+            "1d4",
+            "1 ma"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Alabarda",
+            "Due mani, Pesante, Portata",
+            "Taglienti",
+             3 kg,
+            "1d10",
+            "20 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Ascia",
+            "Lancio (gittata 6/18), Leggera",
+            "Taglienti",
+             1 kg,
+            "1d6",
+            "5 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Ascia Bipenne",
+            "Due mani, Pesante",
+            "Taglienti",
+             3,5 kg,
+            "1d12",
+            "30 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Ascia da Battaglia",
+            "Versatile (1d10)",
+            "Taglienti",
+             2 kg,
+            "1d8",
+            "10 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Bastone Ferrato",
+            "Versatile (1d8)",
+            "Contundenti",
+             2 kg,
+            "1d6",
+            "2 ma"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Falcione",
+            "Due mani, Pesante, Portata",
+            "Taglienti",
+             3 kg,
+            "1d10",
+            "20 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Mazzafrusto",
+            "None",
+            "Contundenti",
+             1 kg,
+            "1d8",
+            "10 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Falcetto",
+            "Leggera",
+            "Taglienti",
+             1 kg,
+            "1d4",
+            "1 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Frusta",
+            "Accurata, Portata",
+            "Taglienti",
+             1,5 kg,
+            "1d4",
+            "2 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Giavellotto",
+            "Lancio (gittata 9/36)",
+            "Perforanti",
+             1 kg,
+            "1d6",
+            "5 ma"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Lancia da Cavaliere",
+            "Portata Speciale",
+            "Perforanti",
+             3 kg,
+            "1d12",
+            "10 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Lancia",
+            "Lancio (gittata 6/18), Versatile (1d8)",
+            "Perforanti",
+             1,5 kg,
+            "1d6",
+            "1 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Maglio",
+            "Due mani, Pesante",
+            "Contundenti",
+             5 kg,
+            "2d6",
+            "10 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Morning Star",
+            "None",
+            "Perforanti",
+             2 kg,
+            "1d8",
+            "15 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Picca",
+            "Due mani, Pesante, Portata",
+            "Perforanti",
+             9 kg,
+            "1d10",
+            "5 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Piccone da Guerra",
+            "None",
+            "Perforanti",
+             1 kg,
+            "1d8",
+            "5 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Randello Pesante",
+            "Due Mani",
+            "Contundenti",
+             5 kg,
+            "1d8",
+            "2 ma"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Pugnale",
+            "Accurata, Lancio (gittata 6/18), Leggera",
+            "Perforanti",
+             0,5 kg,
+            "1d4",
+            "2 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Spadone",
+            "Due mani, Pesante",
+            "Taglienti",
+             3 kg,
+            "2d6",
+            "50 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Scimitarra",
+            "Accurata, Leggera",
+            "Taglienti",
+             1,5 kg,
+            "1d6",
+            "25 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Spada Corta",
+            "Accurata, Leggera",
+            "Perforanti",
+             1 kg,
+            "1d6",
+            "10 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Stocco",
+            "Accurata",
+            "Perforanti",
+             1 kg,
+            "1d8",
+            "25 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Tridente",
+            "Lancio (gittata 6/18), Versatile (1d8)",
+            "Perforanti",
+             2 kg,
+            "1d6",
+            "5 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Randello",
+            "Leggera",
+            "Perforanti",
+             1 kg,
+            "1d4",
+            "1 ma"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Mazza",
+            "None",
+            "Contundenti",
+             2 kg,
+            "1d6",
+            "5 mo"
+        )
+)
+
+
+result.add(
+        Enchantment(
+            "Spada Lunga",
+            "Versatile (1d10)",
+            "Taglienti",
+             1,5 kg,
+            "1d8",
+            "15 mo"
+        )
+)
+

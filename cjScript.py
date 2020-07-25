@@ -15,6 +15,9 @@ __LIST_FIELDS: FrozenSet[str] = frozenset({
 })
 
 __NAME_MAPPING: Dict[str, str] = {
+    'sfida': 'challange',
+    'classe armatura': 'armorClass',
+    'punti ferita': 'hitPoints',
     'azioni': 'actions',
     'azioni leggendarie': 'legendaryActions',
     'nome': 'name',
@@ -154,7 +157,7 @@ def read_passive_abilities(content: List[PageElement]) -> str:
     """
     Legge tutti i campi non mappati considerandoli abilità passive
     """
-    tags = ((i, t) for (i, t) in enumerate(content) if t.name == 'h3' and not get_name_mapping(t.text))
+    tags = ((i, t) for (i, t) in enumerate(content) if t.name == 'h3' and not get_name_mapping(t.text))  # fixme
 
     headers = (h.text for _, h in tags)
     paragraphs = (content[i + 1].text for i, _ in tags)
