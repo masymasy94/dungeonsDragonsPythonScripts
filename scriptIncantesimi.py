@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 def main():
     with open("./URL_incantesimi.txt", "r") as file_incantesimi:
         url_incantesimi = file_incantesimi.readlines()
+        random.shuffle(url_incantesimi)
         url_incantesimi = [x.strip() for x in url_incantesimi]
         for index, url in enumerate(url_incantesimi):
             if len(url) > 0 and index <= len(url_incantesimi):
