@@ -42,53 +42,76 @@ def stampa_vigliacca(yolo_list) -> str:
     rarita: str = ""
     sintonia: str = ""
     effetto: str = ""
+    nome: str = ""
     proprieta_secondarie: str = ""
+    gen = (filtered_items for filtered_items in yolo_list if filtered_items.tipo_tag != 'p')
 
-    for yolo_item in yolo_list:
+    for yolo_item in gen:
         if yolo_item.nome == 'Tipo':
-            while len(yolo_list) >= (yolo_item.indice + 1) and yolo_list[yolo_item.indice + 1].tipo_tag == "p":
-                tipo += yolo_list[yolo_item.indice + 1].nome
-                yolo_list.pop(yolo_item.indice + 1)
+            i = yolo_item.indice
+            list = []
+            k = 1
+            while (i+k) < len(yolo_list) and (yolo_list[i + k].tipo_tag == 'p' or yolo_list[i + k].tipo_tag == 'thead' or yolo_list[i + k].tipo_tag == 'tbody'):
+                list.append(yolo_list[i + k].nome)
+                k += 1
 
-            if len(yolo_list) >= yolo_item.indice:
-                yolo_list.pop(yolo_item.indice)
+            tipo = "\n".join(list)
+
+        elif yolo_item.nome == 'Nome':
+            i = yolo_item.indice
+            list = []
+            k = 1
+            while (i+k) < len(yolo_list) and (yolo_list[i + k].tipo_tag == 'p' or yolo_list[i + k].tipo_tag == 'thead' or yolo_list[i + k].tipo_tag == 'tbody'):
+                list.append(yolo_list[i + k].nome)
+                k += 1
+
+            nome = "\n".join(list)
 
         elif yolo_item.nome == 'Rarità':
-            while len(yolo_list) >= (yolo_item.indice + 1) and yolo_list[yolo_item.indice + 1].tipo_tag == "p":
-                rarita += yolo_list[yolo_item.indice + 1].nome
-                yolo_list.pop(yolo_item.indice + 1)
+            i = yolo_item.indice
+            list = []
+            k = 1
+            while (i+k) < len(yolo_list)  and (yolo_list[i + k].tipo_tag == 'p' or yolo_list[i + k].tipo_tag == 'thead' or yolo_list[i + k].tipo_tag == 'tbody'):
+                list.append(yolo_list[i + k].nome)
+                k += 1
 
-            if len(yolo_list) >= yolo_item.indice:
-                yolo_list.pop(yolo_item.indice)
+            rarita = "\n".join(list)
 
         elif yolo_item.nome == 'Sintonia':
-            while len(yolo_list) >= (yolo_item.indice + 1) and yolo_list[yolo_item.indice + 1].tipo_tag == "p":
-                sintonia += yolo_list[yolo_item.indice + 1].nome
-                yolo_list.pop(yolo_item.indice + 1)
+            i = yolo_item.indice
+            list = []
+            k = 1
+            while (i+k) < len(yolo_list) and (yolo_list[i + k].tipo_tag == 'p' or yolo_list[i + k].tipo_tag == 'thead' or yolo_list[i + k].tipo_tag == 'tbody'):
+                list.append(yolo_list[i + k].nome)
+                k += 1
 
-            if len(yolo_list) >= yolo_item.indice:
-                yolo_list.pop(yolo_item.indice)
+            sintonia = "\n".join(list)
 
         elif yolo_item.nome == 'Effetto':
-            while len(yolo_list) >= (yolo_item.indice + 1) and yolo_list[yolo_item.indice + 1].tipo_tag == "p":
-                effetto += yolo_list[yolo_item.indice + 1].nome
-                yolo_list.pop(yolo_item.indice + 1)
+            i = yolo_item.indice
+            list = []
+            k = 1
+            while (i+k) < len(yolo_list) and (yolo_list[i + k].tipo_tag == 'p' or yolo_list[i + k].tipo_tag == 'thead' or yolo_list[i + k].tipo_tag == 'tbody'):
+                list.append(yolo_list[i + k].nome)
+                k += 1
 
-            if len(yolo_list) >= yolo_item.indice:
-                yolo_list.pop(yolo_item.indice)
-
+            effetto = "\n".join(list)
         else:
-            proprieta_secondarie += yolo_item.nome + "\n"
-            while len(yolo_list) >= (yolo_item.indice + 1) and yolo_list[yolo_item.indice + 1].tipo_tag == "p":
-                proprieta_secondarie += yolo_list[yolo_item.indice + 1].nome + "\n"
-                yolo_list.pop(yolo_item.indice + 1)
+            if yolo_list[yolo_item.indice].tipo_tag != 'thead' and yolo_list[yolo_item.indice].tipo_tag != 'tbody':
+                i = yolo_item.indice
+                list = []
+                k = 1
+                while (i+k) < len(yolo_list):
+                    list.append(yolo_list[i + k].nome)
+                    k += 1
 
-            if len(yolo_list) >= yolo_item.indice:
-                yolo_list.pop(yolo_item.indice)
+                proprieta_secondarie = "\n".join(list)
+                break
 
-            return f"""
+    return f"""
 result.add(
         Enchantment(
+            "{nome}",
             "{tipo}",
             "{rarita}",
             "{sintonia}",
@@ -103,23 +126,29 @@ result.add(
 def main():
     with open("./URL_OggettiMagici.txt", "r") as file_oggetti:
         url_oggetti = file_oggetti.readlines()
+        random.shuffle(url_oggetti)
         url_oggetti = [x.strip() for x in url_oggetti]
         for index, url in enumerate(url_oggetti):
+            # url = "https://www.dungeonsanddragonsitalia.it/compendio/oggetti-magici/pergamene/pergamena-magica/"
             if len(url) > 0 and index <= len(url_oggetti):
                 print(url)
                 r = requests.get(url)
                 if r.status_code == 200:
                     obj = BeautifulSoup(r.content, 'html.parser')
                     hp_map = []
-                    index: int = 0
-                    for x in obj.find(id='tab-description').find_all_next(['h2', 'h3', 'p']):
-                        hp_map.append(yolo(index, x.text, x.name))
-                        index += 1
-
                     hp_map.append(yolo(len(hp_map), 'Nome', 'h2'))
                     hp_map.append(yolo(len(hp_map), obj.find(class_='product_title entry-title').string, 'p'))
 
-                    with open("result_oggetti.txt", "a") as text_file:
+                    for x in obj.find_all('section'):
+                        x.decompose()
+
+                    for x in obj.find_all(class_='products columns-4'):
+                        x.decompose()
+
+                    for x in obj.find(id='tab-description').find_all_next(['h2', 'h3', 'p', 'thead', 'tbody']):
+                        hp_map.append(yolo(len(hp_map), x.text, x.name))
+
+                    with open("result_oggetti.txt", "a", encoding='utf-8') as text_file:
                         print(stampa_vigliacca(hp_map), file=text_file)
                         text_file.close()
                     print(stampa_vigliacca(hp_map))
@@ -132,4 +161,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
